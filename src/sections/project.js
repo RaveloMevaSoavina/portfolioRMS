@@ -1,4 +1,5 @@
 /** @jsx jsx */
+import {useState , useEffect} from 'react';
 import { jsx, Box, Container, Image, Button } from 'theme-ui';
 import { RiArrowRightSLine } from 'react-icons/ri';
 import Masonry from 'react-masonry-component';
@@ -50,6 +51,15 @@ const masonryOptions = {
 };
 
 const Gallery = () => {
+
+  const [timeout, settimeout] = useState(false); // debug gallery project bug mansory timeout
+
+  useEffect(() => {
+      setTimeout(() => {
+        settimeout(true)
+      }, 100);
+  },[])
+
   return (
     <Box id="gallery" as="section" sx={styles.section}>
       <Container sx={styles.container}>
@@ -58,11 +68,11 @@ const Gallery = () => {
           slogan="Projets personnels"
           title="Decouvrons ensemble mes projets personnels"
         />
-        <Box as={Masonry} options={masonryOptions} sx={styles.galleryWrapper}>
+        {timeout && <Box as={Masonry} options={masonryOptions} sx={styles.galleryWrapper}>
           {data?.map((item) => (
             <GalleryCard key={item.id} item={item} />
           ))}
-        </Box>
+        </Box>}
         <Button variant="muted" sx={styles.button}>
           Voir plus de projets <RiArrowRightSLine size="20px" />
         </Button>

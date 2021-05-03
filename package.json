@@ -1,5 +1,5 @@
 {
-  "name": "RaveloMevaSoavina",
+  "name": "ravelomevasoavina",
   "version": "1.2.4",
   "private": true,
   "author" : "RaveloMevaSoavina",
@@ -11,7 +11,7 @@
     "postbuild": "next-sitemap"
   },
   "dependencies": {
-    "next": "9.5.3",
+    "next": "9.5.4",
     "next-compose-plugins": "^2.2.0",
     "next-optimized-images": "^2.6.2",
     "polished": "^3.6.7",

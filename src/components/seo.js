@@ -52,7 +52,7 @@ export default function SEO({
 }
 
 SEO.defaultProps = {
-  lang: `en`,
+  lang: `fr`,
   meta: [],
   description: ``,
 };

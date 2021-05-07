@@ -19,6 +19,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 SwiperCore.use([Autoplay, Pagination, EffectFade]);
 
+const desc = "Je m'appelle Ravelo Meva Soavina , j'ai 26 ans et je suis un developpeur web et ingénieur électronicien en automatisme en même temps, passionné de tout ce qui gravite autour de la nouvelle téchnologie. Ayant conscient de l'avenir du domaine du digital, je n'ai pas hésité à m'auto-former au dévéloppement web. Et maintenant je suis à la recherche de mission en freelance ou du consultance en entreprise afin d'améliorer en permanance mon expérience."
+
 const data = {
   feature: [
     {
@@ -91,8 +93,8 @@ const FeaturedSpace = () => {
           <Box sx={styles.leftContent}>
             <SectionHeading
               sx={styles.heading}
-              title="A MON PROPOS"
-              description="Je m'appelle Ravelo Meva Soavina , j'ai 25 ans et je suis un ingénieur électronicien d'automatisme et developpeur web aussi, passionné de tout ce qui gravite autour de la nouvelle téchnologie. Ayant conscient de l'avenir du domaine du digital, je n'ai pas hésité à m'auto-former au dévéloppement web. Et maintenant je suis à la recherche de mission en freelance ou du consultance en entreprise afin d'améliorer en permanance mon expérience."
+              title="BIOGRAPHIE"
+              description={desc}
             />
             <Box sx={styles.featureWrapper}>
               {data?.feature?.map((feature) => (

@@ -29,7 +29,7 @@ export default function Banner() {
               RAVELO MEVA SOAVINA
             </Heading>
             <Heading as="h3" sx={styles.secondaryTitle}>
-              Developpeur Web
+              Developpeur Front-end
             </Heading>
             <Box>
               <Button type="submit" sx={styles.button} variant="primary" >
@@ -55,6 +55,7 @@ const styles = {
   section: {
     background: `url(${bannerBg}) no-repeat center top / cover`,
     backgroundSize: ['cover', null, null, null, 'cover'],
+    opacity : 0.9
   },
   contentWrapper: {
     display: 'flex',
@@ -93,7 +94,7 @@ const styles = {
     },
   },
   heroTitle: {
-    fontSize: [22, 24, 28, 35, 35, '30px', 5],
+    fontSize: [22, 24, 28, 35, 35, '60px', 5],
     fontWeight: 800,
     letterSpacing: 'heading',
     lineHeight: [1.4, null, null, null, null, null, null],
@@ -104,6 +105,7 @@ const styles = {
   secondaryTitle : {
     fontSize: [22, 24, 28, 35, 35, '25px', '30px'],
     mb : '20px',
+    fontStyle : 'italic',
     fontWeight: 500,
     letterSpacing: 'heading',
     lineHeight: [1.4, null, null, null, null, null, null],

@@ -3,6 +3,36 @@ import { jsx, Box, Container, Image, Flex, Link } from 'theme-ui';
 import { RiArrowRightSLine } from 'react-icons/ri';
 import SectionHeading from 'components/section-heading';
 import customer from 'assets/images/customer.png';
+import ContactCard from 'components/cards/contact-card'
+import LogoLinkedin from 'assets/images/gallery/1.png';
+const data = [
+    {
+      id: 1,
+      title: 'Linkedin',
+      link : `https://www.linkedin.com/in/meva-ravelo-8a455120a`
+    },
+    {
+      id: 2,
+      title: 'Facebook',
+      link : 'https://www.facebook.com/ravelo.mevasoavina/'
+    },
+    {
+      id: 3,
+      title: 'Github',
+      link : 'https://github.com/RaveloMevaSoavina'
+    },
+    {
+      id: 4,
+      title: 'Gmail',
+      link : ''
+    },
+    {
+      id: 5,
+      title: 'Dribbble',
+      link : 'https://dribbble.com/RaveloMevaSoavina'
+    },
+    
+]
 
 const OurCustomer = () => {
   return (
@@ -19,8 +49,11 @@ const OurCustomer = () => {
               description="Laissez-moi un message , ça me fera plaisir de vous répondre."
             />
             <Box sx={{ textAlign: ['center', 'center', 'center', 'left'] }}>
+            {data?.map((item) => (
+                  <ContactCard key={item.id} item={item}/>
+            ))}
               {/* <Link variant="links.learnMore" sx={styles.link} href="#!">
-                Learn more <RiArrowRightSLine size="20px" />
+                Linkedin 
               </Link> */}
             </Box>
           </Box>

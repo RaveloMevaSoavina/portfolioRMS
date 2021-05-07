@@ -2,7 +2,7 @@
   "name": "ravelomevasoavina",
   "version": "1.2.4",
   "private": true,
-  "author" : "RaveloMevaSoavina",
+  "author": "RaveloMevaSoavina",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

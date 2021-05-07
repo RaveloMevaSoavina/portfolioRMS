@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx, Box, Container, Heading, Text, Button } from 'theme-ui';
 import { rgba } from 'polished';
-
+import Link from 'next/link'
 import Select from 'components/select';
 import bannerBg from 'assets/images/banner-bg.jpg';
 import mapMarker from 'assets/images/icons/map-marker.png';
@@ -14,6 +14,10 @@ export default function Banner() {
     console.log('submitting...');
   };
 
+  const handleGoToGithub = (e, where) => {
+    window.open(where, "_blank");
+  }
+
   return (
     <Box as="section" id="home" sx={styles.section}>
       <Container>
@@ -22,7 +26,7 @@ export default function Banner() {
             <Heading as="h1" sx={styles.heroTitle}>
               RAVELO MEVA SOAVINA
             </Heading>
-            <Box as="form" onSubmit={handleSubmit}>
+            <Box>
               <Button type="submit" sx={styles.button} variant="primary">
                 Visiter mon profil Github 
               </Button>

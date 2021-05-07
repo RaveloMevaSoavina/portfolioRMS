@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import {useState , useEffect} from 'react';
+import { useRouter } from 'next/router'
 import { jsx, Box, Container, Image, Button } from 'theme-ui';
 import { RiArrowRightSLine } from 'react-icons/ri';
 import Masonry from 'react-masonry-component';
@@ -46,19 +47,31 @@ const data = [
   },
 ];
 
+const loadingData =[
+  {
+    id: 1,
+    image: gallery1,
+    title: 'DevTube (youtube clone)',
+  },
+  {
+    id: 2,
+    image: gallery2,
+    title: 'Linked\'ev (linked\in clone)',
+  },
+]
+
 const masonryOptions = {
-  transitionDuration: 0,
+  transitionDuration: 0.5,
 };
 
 const Gallery = () => {
 
-  const [timeout, settimeout] = useState(false); // debug gallery project bug mansory timeout
+  // const router = useRouter()
+  const [load , setLoad] = useState(false)
 
   useEffect(() => {
-      setTimeout(() => {
-        settimeout(true)
-      }, 100);
-  },[])
+    data.push(...loadingData);
+  },[load])
 
   return (
     <Box id="gallery" as="section" sx={styles.section}>
@@ -68,12 +81,14 @@ const Gallery = () => {
           slogan="Projets personnels"
           title="Decouvrons ensemble mes projets personnels"
         />
-        {timeout && <Box as={Masonry} options={masonryOptions} sx={styles.galleryWrapper}>
+        {/* <Box as={Masonry} options={masonryOptions} sx={styles.galleryWrapper}> */}
+        <Box sx={styles.galleryWrapper}>
           {data?.map((item) => (
             <GalleryCard key={item.id} item={item} />
           ))}
-        </Box>}
-        <Button variant="muted" sx={styles.button}>
+        </Box>
+        {/* <Button variant="muted" sx={styles.button} onClick={() => router.push('/projects')}> */}
+        <Button variant="muted" sx={styles.button} onClick={()=>setLoad(true)}>
           Voir plus de projets <RiArrowRightSLine size="20px" />
         </Button>
       </Container>
@@ -93,6 +108,9 @@ const styles = {
   },
   galleryWrapper: {
     mx: '-15px',
+    display: 'flex',
+    flexDirection : 'row',
+    flexWrap : 'wrap'
   },
   button: {
     minHeight: [50, 50, 50, 60],

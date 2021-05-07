@@ -1,7 +1,6 @@
 /** @jsx jsx */
-import { jsx, Box, Container, Heading, Text, Button } from 'theme-ui';
+import { jsx, Box, Container, Heading, Text, Button , Link } from 'theme-ui';
 import { rgba } from 'polished';
-import Link from 'next/link'
 import Select from 'components/select';
 import bannerBg from 'assets/images/banner-bg.jpg';
 import mapMarker from 'assets/images/icons/map-marker.png';
@@ -26,9 +25,14 @@ export default function Banner() {
             <Heading as="h1" sx={styles.heroTitle}>
               RAVELO MEVA SOAVINA
             </Heading>
+            <Heading as="h3" sx={styles.secondaryTitle}>
+              Developpeur Web
+            </Heading>
             <Box>
-              <Button type="submit" sx={styles.button} variant="primary">
-                Visiter mon profil Github 
+              <Button type="submit" sx={styles.button} variant="primary" >
+                  <Link href="https://github.com/RaveloMevaSoavina" target='_blank' sx={styles.link}>
+                    Visiter mon profil Github 
+                  </Link>
               </Button>
               <Button type="submit" sx={styles.button} variant="primary">
                 Télecharger mon CV
@@ -91,6 +95,16 @@ const styles = {
       fontSize: 35,
     },
   },
+  secondaryTitle : {
+    fontSize: [22, 24, 28, 35, 35, '25px', '30px'],
+    mb : '20px',
+    fontWeight: 500,
+    letterSpacing: 'heading',
+    lineHeight: [1.4, null, null, null, null, null, null],
+    '@media only screen and (min-height: 720px) and (max-height: 760px), (min-width: 1501px) and (max-width: 1560px) ': {
+      fontSize: 35,
+    },
+  },
   desc: {
     fontSize: [15, 16, 15, 17],
     lineHeight: [1.53, 1.53, 1.53, 2, 2.4, 2, 2.48],
@@ -112,6 +126,19 @@ const styles = {
     fontWeight: 700,
     marginTop: 20,
     width: '100%',
+    minHeight: [50, null, null, null, 60],
+    fontSize: [16, 16, 16, 20],
+    ':focus': {
+      outline: '0 none',
+    },
+  },
+  link: {
+    fontSize: 20,
+    fontWeight: 700,
+    textDecoration : 'none',
+    color : '#FFF',
+    width: '100%',
+    paddingTop :"15px",
     minHeight: [50, null, null, null, 60],
     fontSize: [16, 16, 16, 20],
     ':focus': {

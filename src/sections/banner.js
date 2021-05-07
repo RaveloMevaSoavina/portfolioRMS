@@ -8,6 +8,9 @@ import { BsTextCenter } from 'react-icons/bs';
 
 
 export default function Banner() {
+
+  const monCvLink = 'https://drive.google.com/file/d/1XuYqBqYweJRv1v27nIrQL8mZduoL8Fem/view?usp=sharing' 
+
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('submitting...');
@@ -35,7 +38,10 @@ export default function Banner() {
                   </Link>
               </Button>
               <Button type="submit" sx={styles.button} variant="primary">
-                Télecharger mon CV
+                <a  sx={styles.link} href={monCvLink} target='_blank' rel='noopener noreferrer'>
+                  Télecharger mon CV
+                </a> 
+                
               </Button>
             </Box>
           </Box>

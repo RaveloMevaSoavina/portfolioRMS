@@ -18,6 +18,7 @@ import graphql from 'assets/images/clients/info/graphql.png';
 
 import arduino from 'assets/images/clients/electronic/arduino.png';
 import pic from 'assets/images/clients/electronic/pic.png';
+const monCvLink = 'https://drive.google.com/file/d/1XuYqBqYweJRv1v27nIrQL8mZduoL8Fem/view?usp=sharing' 
 
 const info = [
   {
@@ -160,7 +161,9 @@ const Clients = () => {
           ))}
         </Slider>
         <Button variant="muted" sx={styles.button}>
-          Télécharger mon CV pour plus de détails
+          <a  sx={styles.link} href={monCvLink} target='_blank' rel='noopener noreferrer'>
+              Télécharger mon CV pour plus de détails
+          </a>
         </Button>
       </Container>
     </Box>
@@ -170,6 +173,13 @@ const Clients = () => {
 export default Clients;
 
 const styles = {
+  link:{
+      textDecoration: 'none',
+      color : '#444',
+      ':hover': {
+        color : '#FFF'
+      },
+  },
   section: {
     pt: [50, 50, 50, 70, 60, 80],
     pb: [30, 40, 50, 60, 50, 80],

@@ -9,8 +9,9 @@ export default function Layout({ children }) {
       <Header />
       <main
         sx={{
-          variant: 'layout.main',
+          variant: 'layout.main'
         }}
+
       >
         {children}
       </main>

@@ -1,10 +1,15 @@
 /** @jsx jsx */
 import { jsx, Box, Flex, Image } from 'theme-ui';
 
-const GalleryCard = ({ item }) => {
+const GalleryCard = ({ item , push}) => {
+
+  const handleClick = (id)=>{
+    push(id)
+  }
+
   return (
-    <Flex as="figure" sx={styles.figure}>
-      <Image loading="lazy" src={item?.image} alt={item?.title} />
+    <Flex as="figure" sx={styles.figure} onClick={()=>handleClick(item?.id)}>
+      <Image loading="lazy" src={item?.img} alt={item?.title} />
       <Box as="figcaption">{item?.title}</Box>
     </Flex>
   );

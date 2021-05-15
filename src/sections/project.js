@@ -64,10 +64,15 @@ const masonryOptions = {
   transitionDuration: 0.5,
 };
 
-const Gallery = () => {
+const Gallery = ({ posts , lookAt}) => {
 
-  // const router = useRouter()
+  // console.log(posts , "projects")
+
+  const router = useRouter()
   const [load , setLoad] = useState(false)
+
+  // const handlePushPage = (idProject) => router.push(`/projects/${idProject}`)
+  const handlePushPage = (idProject) => lookAt(idProject);
 
   useEffect(() => {
     data.push(...loadingData);
@@ -83,8 +88,8 @@ const Gallery = () => {
         />
         {/* <Box as={Masonry} options={masonryOptions} sx={styles.galleryWrapper}> */}
         <Box sx={styles.galleryWrapper}>
-          {data?.map((item) => (
-            <GalleryCard key={item.id} item={item} />
+          {posts?.map((item) => (
+            <GalleryCard key={item.id} item={item} push={handlePushPage}/>
           ))}
         </Box>
         {/* <Button variant="muted" sx={styles.button} onClick={() => router.push('/projects')}> */}

@@ -20,7 +20,11 @@ export default function projectitems({post , lookAt}) {
       <Flex sx={styles.contentWrapper}>
         <Box as="figure" sx={styles.illustration}>
           <Image loading="lazy" src={post.img} alt={post.title} />
-          <Button variant="white" sx={styles.button}>Visualisation Démo</Button>
+          <Button variant="white" sx={styles.button}>
+                <Link href={post?.live} target='_blank' sx={styles.live}>
+                   Visualisation d'un démo
+                </Link>
+          </Button>
         </Box>
         
         <Box sx={styles.rightContent}>
@@ -46,6 +50,7 @@ export default function projectitems({post , lookAt}) {
 }
 
 const styles = {
+  
     section: {
       p: [60, 60, 60, 50, 50, 50],
       backgroundColor: '#EDF0F2',
@@ -96,11 +101,16 @@ const styles = {
         mt: [3, 3, 3, 20, 5],
       },
     },
-    link: {
+    live: {
+        textDecoration : 'none',
+        color : "#000",
+        width: '100%',
+        padding : "15px",
       svg: {
         transition: 'margin-left 0.3s ease-in-out 0s',
       },
       ':hover': {
+        color : "#FFF",
         svg: {
           ml: '5px',
         },
@@ -112,14 +122,13 @@ const styles = {
         fontSize: [14, 14, 16],
         width: '100%',
         bg : "white",
-          color : "dark",
+        color : "dark",
         svg: {
           transition: 'margin-left 0.3s ease-in-out 0s',
         },
         ':hover': {
-          
           bg : "dark",
-        color : "white",
+          color : "#FFF",
           svg: {
             ml: '5px',
           },

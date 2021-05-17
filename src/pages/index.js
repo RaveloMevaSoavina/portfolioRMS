@@ -1,5 +1,5 @@
 import React , { useState} from 'react';
-import { ThemeProvider } from 'theme-ui';
+import { ThemeProvider, Box } from 'theme-ui';
 import theme from 'theme';
 import SEO from 'components/seo';
 import Layout from 'components/layout';
@@ -24,13 +24,13 @@ export default function IndexPage({posts}) {
     <ThemeProvider theme={theme}>
       <Layout>
         <SEO title="Ravelo Meva Soavina" />
-        <Banner />
-        <AboutMe />
-        <Education />
-        <Skill />
-        <Experience />
-        <Project posts={posts} lookAt={handleLookAt}/>
-        <Contact />
+          <Banner />
+          <AboutMe />
+          <Education />
+          <Skill />
+          <Experience />
+          <Project posts={posts} lookAt={handleLookAt}/>
+          <Contact />
         {IDofLookAt != 0 && <ProjectItem post ={posts.filter(post => post.id == IDofLookAt)[0]} lookAt={handleLookAt}/>}
       </Layout>
     </ThemeProvider>

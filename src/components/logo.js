@@ -12,7 +12,7 @@ export default function Logo({ white }) {
         variant: 'links.logo',
       }}
     >
-      <Image src={logo} alt="startup landing logo" style={{width : "90px", height : "80px"}}/>
+      <Image src={logo} alt="ravelo" style={{width : "90px", height : "80px"}}/>
       {/* <h4>RAVELO</h4> */}
     </Link>
   );

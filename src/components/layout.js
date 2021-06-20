@@ -3,7 +3,7 @@ import { jsx } from 'theme-ui';
 import React from 'react';
 import Header from './header/header';
 import Footer from './footer';
-export default function Layout({ children }) {
+export default function Layout({ children}) {
   return (
     <React.Fragment>
       <Header />
@@ -11,7 +11,6 @@ export default function Layout({ children }) {
         sx={{
           variant: 'layout.main'
         }}
-
       >
         {children}
       </main>

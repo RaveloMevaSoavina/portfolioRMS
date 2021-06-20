@@ -9,7 +9,7 @@ import { BsTextCenter } from 'react-icons/bs';
 
 export default function Banner() {
 
-  const monCvLink = 'https://drive.google.com/file/d/1XuYqBqYweJRv1v27nIrQL8mZduoL8Fem/view?usp=sharing' 
+  const monCvLink = "https://drive.google.com/file/d/1gZYubeRiYkaaWTfUrP7Gzk-YgJuSfOeU/view?usp=sharing"
 
   const handleSubmit = (e) => {
     e.preventDefault();

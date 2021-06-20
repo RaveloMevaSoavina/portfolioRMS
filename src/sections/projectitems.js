@@ -14,38 +14,49 @@ SwiperCore.use([Autoplay, Pagination, EffectFade]);
 export default function projectitems({post , lookAt}) {
   
     return (
+    <Box sx={{
+      width: "100vw",
+      height : "100vh",
+      backgroundColor : "rgba(0, 0, 0, 0.7)",
+      position : "fixed",
+      top :0,
+      right : 0,
+      left : 0,
+      zIndex : 9999,
+    }}>
     <Card as="section" sx={styles.section} id="project">
-    <Close onClick={()=>lookAt(0)} sx={styles.close}/>
-    <Container>
-      <Flex sx={styles.contentWrapper}>
-        <Box as="figure" sx={styles.illustration}>
-          <Image loading="lazy" src={post.img} alt={post.title} />
-          <Button variant="white" sx={styles.button}>
-                <Link href={post?.live} target='_blank' sx={styles.live}>
-                   Visualisation d'un démo
-                </Link>
-          </Button>
-        </Box>
-        
-        <Box sx={styles.rightContent}>
-          <SectionHeading
-            sx={styles.heading}
-            title={post.title}
-            description={post.goal}
-          />
-          <Box sx={{ textAlign: ['center', 'center', 'center', 'left'] }}>
-              <h4>Technologie utilisée : </h4>
-              <ul>
-                  {post?.stack?.map(item => 
-                      <li>{item}</li>
-                  )}
-              </ul>
+      <Close onClick={()=>lookAt(0)} sx={styles.close}/>
+      <Container>
+        <Flex sx={styles.contentWrapper}>
+          <Box as="figure" sx={styles.illustration}>
+            <Image loading="lazy" src={post.img} alt={post.title} />
+            <Button variant="white" sx={styles.button}>
+                  <Link href={post?.live} target='_blank' sx={styles.live}>
+                    Visualisation d'un démo
+                  </Link>
+            </Button>
           </Box>
-          <Box sx={{ height : "100px"}}></Box>
-        </Box>
-      </Flex>
-    </Container>
+          
+          <Box sx={styles.rightContent}>
+            <SectionHeading
+              sx={styles.heading}
+              title={post.title}
+              description={post.goal}
+            />
+            <Box sx={{ textAlign: ['center', 'center', 'center', 'left'] }}>
+                <h4>Technologie utilisée : </h4>
+                <ul>
+                    {post?.stack?.map(item => 
+                        <li>{item}</li>
+                    )}
+                </ul>
+            </Box>
+            <Box sx={{ height : "100px"}}></Box>
+          </Box>
+        </Flex>
+      </Container>
   </Card>
+  </Box>
     )
 }
 
@@ -53,6 +64,7 @@ const styles = {
   
     section: {
       p: [60, 60, 60, 50, 50, 50],
+      // backgroundColor: '#EDF0F2',
       backgroundColor: '#EDF0F2',
       m: [5, 10, 15, 20, 20, 5],
       zIndex: 100,

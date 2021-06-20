@@ -18,7 +18,7 @@ import graphql from 'assets/images/clients/info/graphql.png';
 
 import arduino from 'assets/images/clients/electronic/arduino.png';
 import pic from 'assets/images/clients/electronic/pic.png';
-const monCvLink = 'https://drive.google.com/file/d/1XuYqBqYweJRv1v27nIrQL8mZduoL8Fem/view?usp=sharing' 
+const monCvLink = "https://drive.google.com/file/d/1gZYubeRiYkaaWTfUrP7Gzk-YgJuSfOeU/view?usp=sharing"
 
 const info = [
   {

@@ -5,6 +5,9 @@ import Logo from 'components/logo';
 import { rgba } from 'polished';
 
 export default function Footer() {
+
+  const today = new Date();
+  const year = today.getFullYear()
   return (
     <Box as="footer" sx={styles.footer}>
       <Container sx={styles.container}>
@@ -15,7 +18,7 @@ export default function Footer() {
             </Text>
             <br/>
             <Text as="span">
-              Copyright © Novembre 2020
+              Copyright © {year}
             </Text>
           </Flex>
         </Flex>

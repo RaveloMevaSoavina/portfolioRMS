@@ -9,7 +9,7 @@ const data = [
     {
       id: 1,
       title: 'Linkedin',
-      link : `https://www.linkedin.com/in/meva-ravelo-8a455120a`
+      link : `https://www.linkedin.com/in/meva-soavina-ravelo-8a455120a/`
     },
     {
       id: 2,

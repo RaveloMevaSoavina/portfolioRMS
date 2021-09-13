@@ -40,7 +40,7 @@ export default function IndexPage({posts}) {
 // This function gets called at build time
 export async function getStaticProps() {
   // Call an external API endpoint to get posts
-  const res = await fetch('http://my-json-server.typicode.com/RaveloMevaSoavina/my-json-portfolio/project')
+  const res = await fetch('http://localhost:3000/api/v1/projects')
   const posts = await res.json()
 
   // By returning { props: { posts } }, the Blog component

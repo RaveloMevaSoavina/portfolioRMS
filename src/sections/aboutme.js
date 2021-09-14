@@ -19,7 +19,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 SwiperCore.use([Autoplay, Pagination, EffectFade]);
 
-const desc = "Je m'appelle Ravelo Meva Soavina , j'ai 26 ans et je suis un developpeur web et ingénieur électronicien en automatisme en même temps, passionné de tout ce qui gravite autour de la nouvelle téchnologie. Ayant conscient de l'avenir du domaine du digital, je n'ai pas hésité à m'auto-former au dévéloppement web. Et maintenant je suis à la recherche de mission en freelance ou du consultance en entreprise afin d'améliorer en permanance mon expérience."
+const desc = "Je m'appelle Ravelo Meva Soavina , j'ai 26 ans et je suis un developpeur web et ingénieur électronicien en automatisme en même temps, passionné de tout ce qui gravite autour de la nouvelle téchnologie. Ayant conscient de l'avenir du domaine du digital, je n'ai pas hésité à m'auto-former au dévéloppement web. Et maintenant je suis à la recherche de mission en freelance ou du consultance en entreprise afin d'améliorer en permanance mon expérience. Ma force de proposition, mon expérience en tant que développeur et mon organisation sont mes points forts pour vous accompagner dans vos projets."
 
 const data = {
   feature: [

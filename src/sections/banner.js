@@ -29,7 +29,7 @@ export default function Banner() {
               RAVELO MEVA SOAVINA
             </Heading>
             <Heading as="h3" sx={styles.secondaryTitle}>
-              Developpeur Front-end
+              - Developpeur Frontend -
             </Heading>
             <Box>
               <Button type="submit" sx={styles.button} variant="primary" >
@@ -63,16 +63,8 @@ const styles = {
     minHeight: ['20vh', '20vh', null, null, '70vh', '85vh'],
   },
   bannerContent: {
-    // backgroundColor: rgba('#fff',0.5),
-    // boxShadow: [
-    //   '0px 10px 16px rgba(52, 61, 72, 0.12)',
-    //   null,
-    //   null,
-    //   null,
-    //   'none',
-    // ],
     textAlign: 'center',
-    maxWidth: [600, null, null, 600, 400, '100vw', '100vw'],
+    maxWidth: ['100vw', null, null, 600, 600, '100vw', '100vw'],
     maxHeight: ['100vh', '100vh', '100vh', 600, 500, '400px', '90vh'],
 
     padding: [
@@ -94,7 +86,7 @@ const styles = {
     },
   },
   heroTitle: {
-    fontSize: [22, 24, 28, 35, 35, '60px', 5],
+    fontSize: [22, 30, 28, 35, '40px', '60px', '60px'],
     fontWeight: 800,
     letterSpacing: 'heading',
     lineHeight: [1.4, null, null, null, null, null, null],
@@ -103,10 +95,12 @@ const styles = {
     },
   },
   secondaryTitle : {
-    fontSize: [22, 24, 28, 35, 35, '25px', '30px'],
+    fontSize: [22, 24, 28, '20px', '25px', '30px', '30px'],
     mb : '20px',
-    fontStyle : 'italic',
-    fontWeight: 500,
+    fontStyle : 'normal',
+    color : '#8D448B',
+    fontWeight: 800,
+    textTransform: 'uppercase',
     letterSpacing: 'heading',
     lineHeight: [1.4, null, null, null, null, null, null],
     '@media only screen and (min-height: 720px) and (max-height: 760px), (min-width: 1501px) and (max-width: 1560px) ': {

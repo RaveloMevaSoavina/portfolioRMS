@@ -9,36 +9,45 @@ import thumb1 from 'assets/images/blog/1.png';
 import thumb2 from 'assets/images/blog/2.png';
 import thumb3 from 'assets/images/blog/3.png';
 import thumb4 from 'assets/images/blog/4.jpg';
+import thumb5 from 'assets/images/blog/5.png';
 
 const data = [
   {
     id: 1,
+    thumb: thumb5,
+    commentCount: "Janvier 2021",
+    link: '#!',
+    title: `Développeur Frontend Angular chez AFI assurances`,
+  },
+  {
+    id: 2,
     thumb: thumb4,
     commentCount: "decembre 2020",
     link: '#!',
     title: `Ingénieur Software et systèmes embarqués`,
   },
   {
-    id: 2,
+    id: 3,
     thumb: thumb1,
     commentCount: "Juin 2020",
     link: '#!',
     title: `Developpeur front-end chez MyAgency`,
   },
   {
-    id: 3,
+    id: 4,
     thumb: thumb3,
     commentCount: "Novembre 2019",
     link: '#!',
     title: `Developpeur Nodejs indépendant chez Freelancer`,
   },
   {
-    id: 4,
+    id: 5,
     thumb: thumb2,
     commentCount: "Septembre 2019",
     link: '#!',
     title: `Stagiaire en tant que technicien de maintenance chez Mark'in`,
   },
+  
   
 ];
 

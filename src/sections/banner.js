@@ -26,20 +26,20 @@ export default function Banner() {
         <Box sx={styles.contentWrapper}>
           <Box sx={styles.bannerContent}>
             <Heading as="h1" sx={styles.heroTitle}>
-              RAVELO MEVA SOAVINA
+              MEVA SOAVINA RAVELO
             </Heading>
             <Heading as="h3" sx={styles.secondaryTitle}>
-              - Developpeur Frontend -
+              - Fullstack React-Node developer -
             </Heading>
             <Box>
               <Button type="submit" sx={styles.button} variant="primary" >
                   <Link href="https://github.com/RaveloMevaSoavina" target='_blank' sx={styles.link}>
-                    Visiter mon profil Github 
+                    Visit my Github profile 
                   </Link>
               </Button>
               <Button type="submit" sx={styles.button} variant="primary">
                 <a  sx={styles.link} href={monCvLink} target='_blank' rel='noopener noreferrer'>
-                  Télecharger mon CV
+                  Download my Resume
                 </a> 
                 
               </Button>

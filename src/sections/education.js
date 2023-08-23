@@ -17,22 +17,22 @@ const monthlyPricing = [
     title: 'Ecole privée TANTELY',
     amount: '2000 - 2010',
     isRecommended: true,
-    grade : "CEPE",
+    grade: "CEPE",
     features: [
       {
         id: 1,
         isAvailable: true,
-        title: "De l'âge de 5 ans à 15 ans",
+        title: "From age 5 to 15",
       },
       {
         id: 2,
         isAvailable: true,
-        title: `De la classe de maternelle au classe de 4ème`,
+        title: `From kindergarten to 4th grade`,
       },
       {
         id: 3,
         isAvailable: true,
-        title: `Diplôme obtenue : CEPE`,
+        title: `Diploma obtained: CEPE`,
       },
       {
         id: 4,
@@ -47,22 +47,22 @@ const monthlyPricing = [
     title: 'Institution Sainte-Famille',
     amount: '2010 - 2013',
     isRecommended: true,
-    grade : "Bachelier",
+    grade: "Baccalaureate",
     features: [
       {
         id: 1,
         isAvailable: true,
-        title: 'De l\'âge de 15 ans à l\'âge de 18ans',
+        title: 'From 15 to 18 years old',
       },
       {
         id: 2,
         isAvailable: true,
-        title: `De la classe de 4ème jusqu'au classe de Terminal`,
+        title: `From 4th grade to final year of high school`,
       },
       {
         id: 3,
         isAvailable: true,
-        title: `Diplôme obtenue : BEPC - BEP - BACC`,
+        title: `Diploma obtained: BEPC - BEP - BACC`,
       },
       {
         id: 4,
@@ -80,22 +80,22 @@ const annualPricing = [
     title: 'Ecole Supérieure Polytechnique d\'Antananarivo',
     amount: "2014 - 2017",
     isRecommended: true,
-    grade : "Licence L3",
+    grade: "Bachelor's degree L3",
     features: [
       {
         id: 2,
         isAvailable: true,
-        title: `Du 19 ans à 23 ans`,
+        title: `From 19 to 23 years old`,
       },
       {
         id: 1,
         isAvailable: true,
-        title: `Licence 1 au Licence 3`,
+        title: `Licence 1 to Licence 3`,
       },
       {
         id: 3,
         isAvailable: true,
-        title: `Diplôme obtenu : LICENCE ELECTRONIQUE`,
+        title: `Diploma obtained: ELECTRONICS LICENCE`,
       },
       {
         id: 4,
@@ -110,22 +110,22 @@ const annualPricing = [
     title: 'Ecole Supérieure Polytechnique d\'Antananarivo',
     amount: "2017 - 2019",
     isRecommended: true,
-    grade : "Master M2",
+    grade: "Master M2",
     features: [
       {
         id: 4,
         isAvailable: true,
-        title: `Du 23 ans à 24 ans`,
+        title: `From 23 ans to 24 ans`,
       },
       {
         id: 2,
         isAvailable: true,
-        title: `Master 1 au Master 2`,
+        title: `Master 1 to Master 2`,
       },
       {
         id: 1,
         isAvailable: true,
-        title: `Diplôme obtenu : INGENIORAT ELECTRONIQUE`,
+        title: `Diploma obtained: : ELECTRONIC ENGINEERING`,
       },
       {
         id: 3,
@@ -164,8 +164,9 @@ const Pricing = () => {
       <Container>
         <SectionHeading
           sx={styles.heading}
-          slogan="Mes éducations"
-          title="Education secondaire et universitaire"
+          slogan="My background"
+          title="High School and University"
+          description={"With a master's degree in electronics, my academic journey laid the foundation for my enduring passion for technology and problem-solving. This background, coupled with my years of hands-on experience in web development, equips me with a unique blend of theoretical knowledge and practical skills to tackle intricate challenges in the digital landscape."}
         />
         <Flex sx={styles.priceSwitcher}>
           <Button
@@ -173,14 +174,14 @@ const Pricing = () => {
             className={plan?.active === 'monthly' ? 'active' : ''}
             onClick={() => handlePlan('monthly')}
           >
-            Secondaire {"  "}
+            High School {"  "}
           </Button>
           <Button
             variant="text"
             className={plan?.active === 'yearly' ? 'active' : ''}
             onClick={() => handlePlan('yearly')}
           >
-            Universitaire
+            University
           </Button>
         </Flex>
         <Grid sx={styles.grid}>

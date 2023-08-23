@@ -5,7 +5,7 @@ import { IoIosCloseCircle } from 'react-icons/io';
 import { BsArrowRightShort } from 'react-icons/bs';
 import { rgba } from 'polished';
 
-const PriceCard = ({ price , annee }) => {
+const PriceCard = ({ price, annee }) => {
   return (
     <Box
       sx={styles.priceTable}
@@ -41,7 +41,7 @@ const PriceCard = ({ price , annee }) => {
       <Box as="footer" className="priceAmount" sx={styles.footer}>
         <Box>
           <Text as="span" className="price-label">
-          {annee === "monthly" ? "Année scolaire" : "Année universitaire" }
+            Academic Year
           </Text>
           <Text as="span" className="price-value">
             {price?.amount}
@@ -85,7 +85,7 @@ const styles = {
     },
   },
   recommended: {
-    backgroundColor: 'primary',
+    backgroundColor: 'secondary',
     position: 'absolute',
     top: '-16px',
     minHeight: '31px',

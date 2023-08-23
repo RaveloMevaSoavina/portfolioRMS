@@ -19,21 +19,21 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 SwiperCore.use([Autoplay, Pagination, EffectFade]);
 
-const desc = "Je m'appelle Ravelo Meva Soavina , j'ai 26 ans et je suis un developpeur web et ingénieur électronicien en automatisme en même temps, passionné de tout ce qui gravite autour de la nouvelle téchnologie. Ayant conscient de l'avenir du domaine du digital, je n'ai pas hésité à m'auto-former au dévéloppement web. Et maintenant je suis à la recherche de mission en freelance ou du consultance en entreprise afin d'améliorer en permanance mon expérience. Ma force de proposition, mon expérience en tant que développeur et mon organisation sont mes points forts pour vous accompagner dans vos projets."
+const desc = `My name is Ravelo Meva Soavina, I'm ${new Date().getFullYear() - 1995} years old and I'm a web developer and electronic engineer in automation at the same time, passionate about everything around new technology. Aware of the future of the digital domain, I didn't hesitate to train myself in web development. And now I'm looking for freelance work or corporate consulting to constantly improve my experience. My ability to propose, my experience in developing and my organizational skills are my strengths to help you with your projects.`
 
 const data = {
   feature: [
     {
       id: 1,
       icon: users,
-      title: 'Ingénieur Electronicien',
-      description: 'Spécialité automatisme et systèmes embarqués',
+      title: 'Electronic Engineer',
+      description: 'Embedded Systems and IOT',
     },
     {
       id: 2,
       icon: expand,
-      title: 'Dévéloppeur web',
-      description: 'FullStack JS technologie MERNG , MEVNG ',
+      title: 'Web developer',
+      description: 'FullStack NodeReact',
     },
   ],
   gallery: [
@@ -93,7 +93,7 @@ const FeaturedSpace = () => {
           <Box sx={styles.leftContent}>
             <SectionHeading
               sx={styles.heading}
-              title="BIOGRAPHIE"
+              title="BIOGRAPHY"
               description={desc}
             />
             <Box sx={styles.featureWrapper}>
@@ -104,37 +104,8 @@ const FeaturedSpace = () => {
           </Box>
 
           <Box sx={styles.rightContent}>
-          <Image loading="lazy" src={slider1} alt="" />
+            <Image loading="lazy" src={slider1} alt="" />
           </Box>
-            {/* <Progressbar
-              sx={styles.progressbar}
-              togglePlay={togglePlay}
-              handleClick={handleToggle}
-              currentWidth={currentWidth}
-            /> */}
-            {/* <Swiper
-              loop={true}
-              effect="fade"
-              ref={swiperRef}
-              spaceBetween={0}
-              slidesPerView={1}
-              pagination={true}
-            > */}
-              {/* {data?.gallery?.map((item) => (
-                <SwiperSlide key={item.id}>
-                  <Box as="figure" sx={styles.image}>
-                    <Image loading="lazy" src={item.image} alt="" />
-                    <Box as="figcaption">
-                      <Box>
-                        <Heading as="h4">{item.title}</Heading>
-                        <Text as="p">{item.desc}</Text>
-                      </Box>
-                    </Box>
-                  </Box>
-                </SwiperSlide>
-              ))} */}
-            {/* </Swiper> */}
-          {/* {/* </Box> */}
         </Box>
       </Container>
     </Box>
@@ -154,9 +125,11 @@ const styles = {
     alignItems: 'center',
     flexDirection: ['column', null, null, null, 'row'],
     gridTemplateColumns: ['unset', null, null, null, 'repeat(2,1fr)'],
+    // backgroundColor: "green",
   },
   leftContent: {
     m: [0, '30px 0px 0', '30px 50px 0', 0],
+    // backgroundColor: "blue",
   },
   heading: {
     textAlign: ['center', null, null, null, 'left'],
@@ -183,10 +156,14 @@ const styles = {
       'repeat(2,1fr)',
     ],
     justifyContent: ['unset', null, null, 'center', 'center'],
-    textAlign : "center"
+    textAlign: "center"
   },
   rightContent: {
+    flex: 1,
+    // backgroundColor: "red",
     position: 'relative',
+    // right: 90,
+    textAlign: "center",
     mt: [6, null, null, null, 0],
     maxWidth: '100%',
     '.swiper-pagination-bullets': {

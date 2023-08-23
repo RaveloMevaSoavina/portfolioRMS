@@ -6,32 +6,32 @@ import customer from 'assets/images/customer.png';
 import ContactCard from 'components/cards/contact-card'
 import LogoLinkedin from 'assets/images/gallery/1.png';
 const data = [
-    {
-      id: 1,
-      title: 'Linkedin',
-      link : `https://www.linkedin.com/in/meva-soavina-ravelo-8a455120a/`
-    },
-    {
-      id: 2,
-      title: 'Facebook',
-      link : 'https://www.facebook.com/ravelo.mevasoavina/'
-    },
-    {
-      id: 3,
-      title: 'Github',
-      link : 'https://github.com/RaveloMevaSoavina'
-    },
-    {
-      id: 4,
-      title: 'Gmail',
-      link : ''
-    },
-    {
-      id: 5,
-      title: 'Dribbble',
-      link : 'https://dribbble.com/RaveloMevaSoavina'
-    },
-    
+  {
+    id: 1,
+    title: 'Linkedin',
+    link: `https://www.linkedin.com/in/meva-soavina-ravelo-8a455120a/`
+  },
+  {
+    id: 2,
+    title: 'Facebook',
+    link: 'https://www.facebook.com/ravelo.mevasoavina/'
+  },
+  {
+    id: 3,
+    title: 'Github',
+    link: 'https://github.com/RaveloMevaSoavina'
+  },
+  {
+    id: 4,
+    title: 'Gmail',
+    link: ''
+  },
+  {
+    id: 5,
+    title: 'Dribbble',
+    link: 'https://dribbble.com/RaveloMevaSoavina'
+  },
+
 ]
 
 const OurCustomer = () => {
@@ -45,13 +45,13 @@ const OurCustomer = () => {
           <Box sx={styles.rightContent}>
             <SectionHeading
               sx={styles.heading}
-              title="Vous pouvez me joindre sur plusieurs platforme"
-              description="Laissez-moi un message , ça me fera plaisir de vous répondre."
+              title="Reach me through multiple platforms"
+              description="I'm always open to connecting with fellow enthusiasts, professionals, and collaborators. Feel free to reach out to me for any inquiries, opportunities, or engaging discussions. Let's connect and explore the possibilities together!"
             />
             <Box sx={{ textAlign: ['center', 'center', 'center', 'left'] }}>
-            {data?.map((item) => (
-                  <ContactCard key={item.id} item={item}/>
-            ))}
+              {data?.map((item) => (
+                <ContactCard key={item.id} item={item} />
+              ))}
               {/* <Link variant="links.learnMore" sx={styles.link} href="#!">
                 Linkedin 
               </Link> */}

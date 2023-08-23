@@ -1,12 +1,12 @@
 export default [
   {
     path: 'home',
-    label: 'Acceuil',
-    
+    label: 'Home',
+
   },
   {
     path: 'feature',
-    label: 'A propos',
+    label: 'Biography',
   },
   {
     path: 'pricing',
@@ -14,15 +14,15 @@ export default [
   },
   {
     path: 'clients',
-    label: 'Compétences',
+    label: 'Skills',
   },
   {
     path: 'blog',
-    label: 'Expériences',
+    label: 'Experiences',
   },
   {
     path: 'gallery',
-    label: 'Projets',
+    label: 'Projects',
   },
   {
     path: 'contact',

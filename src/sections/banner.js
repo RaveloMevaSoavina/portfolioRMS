@@ -1,15 +1,16 @@
 /** @jsx jsx */
-import { jsx, Box, Container, Heading, Text, Button , Link } from 'theme-ui';
+import { jsx, Box, Container, Heading, Text, Button, Link } from 'theme-ui';
 import { rgba } from 'polished';
 import Select from 'components/select';
-import bannerBg from 'assets/images/banner-bg.jpg';
+import bannerBg from 'assets/images/banner-bg.svg';
+import bannerBgMobile from 'assets/images/banner-bg-svg.svg';
 import mapMarker from 'assets/images/icons/map-marker.png';
 import { BsTextCenter } from 'react-icons/bs';
 
 
 export default function Banner() {
 
-  const monCvLink = "https://drive.google.com/file/d/1gZYubeRiYkaaWTfUrP7Gzk-YgJuSfOeU/view?usp=sharing"
+  const monCvLink = "https://drive.google.com/file/d/1nIzFRCRXOCU7ouRcV73FCbjG-Zcvzpfq/view?usp=sharing"
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -25,23 +26,16 @@ export default function Banner() {
       <Container>
         <Box sx={styles.contentWrapper}>
           <Box sx={styles.bannerContent}>
-            <Heading as="h1" sx={styles.heroTitle}>
-              MEVA SOAVINA RAVELO
-            </Heading>
-            <Heading as="h3" sx={styles.secondaryTitle}>
-              - Fullstack React-Node developer -
-            </Heading>
-            <Box>
+            <Box sx={styles.buttonWrapper}>
               <Button type="submit" sx={styles.button} variant="primary" >
-                  <Link href="https://github.com/RaveloMevaSoavina" target='_blank' sx={styles.link}>
-                    Visit my Github profile 
-                  </Link>
+                <Link href="https://github.com/RaveloMevaSoavina" target='_blank' sx={styles.link}>
+                  Visit my Github profile
+                </Link>
               </Button>
               <Button type="submit" sx={styles.button} variant="primary">
-                <a  sx={styles.link} href={monCvLink} target='_blank' rel='noopener noreferrer'>
+                <a sx={styles.link} href={monCvLink} target='_blank' rel='noopener noreferrer'>
                   Download my Resume
-                </a> 
-                
+                </a>
               </Button>
             </Box>
           </Box>
@@ -55,7 +49,10 @@ const styles = {
   section: {
     background: `url(${bannerBg}) no-repeat center top / cover`,
     backgroundSize: ['cover', null, null, null, 'cover'],
-    opacity : 0.9
+    width: '100vw',
+    '@media only screen and (max-width: 760px) ': {
+      background: `url(${bannerBgMobile}) no-repeat center top / cover`,
+    },
   },
   contentWrapper: {
     display: 'flex',
@@ -66,7 +63,6 @@ const styles = {
     textAlign: 'center',
     maxWidth: ['100vw', null, null, 600, 600, '100vw', '100vw'],
     maxHeight: ['100vh', '100vh', '100vh', 600, 500, '400px', '90vh'],
-
     padding: [
       '50px 40px 50px',
       '50px 40px 50px',
@@ -94,11 +90,11 @@ const styles = {
       fontSize: 35,
     },
   },
-  secondaryTitle : {
+  secondaryTitle: {
     fontSize: [22, 24, 28, '20px', '25px', '30px', '30px'],
-    mb : '20px',
-    fontStyle : 'normal',
-    color : '#8D448B',
+    mb: '20px',
+    fontStyle: 'normal',
+    color: '#8D448B',
     fontWeight: 800,
     textTransform: 'uppercase',
     letterSpacing: 'heading',
@@ -133,18 +129,26 @@ const styles = {
     ':focus': {
       outline: '0 none',
     },
+    marginRight: 20,
   },
   link: {
-    fontSize: 20,
     fontWeight: 700,
-    textDecoration : 'none',
-    color : '#FFF',
+    textDecoration: 'none',
+    color: '#FFF',
     width: '100%',
-    paddingTop :"15px",
+    paddingTop: "15px",
     minHeight: [50, null, null, null, 60],
-    fontSize: [16, 16, 16, 20],
+    fontSizes: [20, 10, 10],
     ':focus': {
       outline: '0 none',
     },
   },
+  buttonWrapper: {
+    display: "flex",
+    marginTop: [100, 200],
+    '@media only screen and (max-width: 760px) ': {
+      flexDirection: "column",
+      marginTop: 300
+    },
+  }
 };

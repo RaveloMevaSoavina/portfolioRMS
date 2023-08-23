@@ -23,7 +23,7 @@ export default SectionHeading;
 
 const styles = {
   headingWrapper: {
-    maxWidth: 584,
+    maxWidth: "80vw",
     margin: '0 auto 60px',
     textAlign: 'center',
   },
@@ -44,5 +44,6 @@ const styles = {
     fontSize: 17,
     lineHeight: 2.07,
     color: (theme) => theme.colors.text,
+
   },
 };

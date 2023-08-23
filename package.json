@@ -10,6 +10,9 @@
     "export": "next export",
     "postbuild": "next-sitemap"
   },
+  "engines":{
+    "node": "^18.0.0"
+  },
   "dependencies": {
     "next": "^9.5.4",
     "next-compose-plugins": "^2.2.0",

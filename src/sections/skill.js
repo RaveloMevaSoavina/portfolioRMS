@@ -4,9 +4,9 @@ import { BsArrowLeft, BsArrowRight } from 'react-icons/bs';
 import { RiArrowRightSLine } from 'react-icons/ri';
 import Slider from 'react-slick';
 import SectionHeading from 'components/section-heading';
-import html from 'assets/images/clients/info/html.png';
+import nest from 'assets/images/clients/info/Nestjs.png';
 import react from 'assets/images/clients/info/react.png';
-import vuejs from 'assets/images/clients/info/vuejs.png';
+import next from 'assets/images/clients/info/nextjs.png';
 import nodejs from 'assets/images/clients/info/nodejs.png';
 import mongodb from 'assets/images/clients/info/mongodb.png';
 import mysql from 'assets/images/clients/info/mysql.png';
@@ -18,23 +18,13 @@ import graphql from 'assets/images/clients/info/graphql.png';
 
 import arduino from 'assets/images/clients/electronic/arduino.png';
 import pic from 'assets/images/clients/electronic/pic.png';
-const monCvLink = "https://drive.google.com/file/d/1gZYubeRiYkaaWTfUrP7Gzk-YgJuSfOeU/view?usp=sharing"
+const monCvLink = "https://drive.google.com/file/d/1nIzFRCRXOCU7ouRcV73FCbjG-Zcvzpfq/view?usp=sharing"
 
 const info = [
-  {
-    id: 1,
-    name: 'HTML-CSS-JS',
-    logo: html,
-  },
   {
     id: 2,
     name: 'React',
     logo: react,
-  },
-  {
-    id: 3,
-    name: 'Vuejs',
-    logo: vuejs,
   },
   {
     id: 4,
@@ -42,15 +32,20 @@ const info = [
     logo: nodejs,
   },
   {
-    id: 5,
-    name: 'Mongodb',
-    logo: mongodb,
+    id: 3,
+    name: 'Nestjs',
+    logo: nest,
   },
-  // {
-  //   id: 5,
-  //   name: 'MySQL',
-  //   logo: mysql,
-  // },
+  {
+    id: 1,
+    name: 'Nextjs',
+    logo: next,
+  },
+  {
+    id: 8,
+    name: 'Redux',
+    logo: redux,
+  },
   {
     id: 6,
     name: 'Tailwind',
@@ -70,6 +65,11 @@ const info = [
     id: 9,
     name: 'GraphQL',
     logo: graphql,
+  },
+  {
+    id: 5,
+    name: 'Mongodb',
+    logo: mongodb,
   },
 ];
 
@@ -150,19 +150,20 @@ const Clients = () => {
     <Box id="clients" as="section" sx={styles.section}>
       <Container>
         <SectionHeading
-          slogan="Mes compétences"
-          title="Mes compétences en tant que developpeur web"
+          slogan="My skills"
+          title="My skills as fullstack web developer"
+          description={"Proficient across the JavaScript ecosystem, both in frontend and backend development, I specialize in creating dynamic web applications. My skillset encompasses a range of frameworks including Reactjs, Nextjs, Nodejs, Nestjs, and Express, allowing me to build seamless user interfaces and robust server-side functionalities."}
         />
         <Slider sx={styles.clients} {...settings}>
           {info?.map((client) => (
             <Box key={client.id} as="figure" sx={styles.logo}>
-              <Image loading="lazy" src={client.logo} alt={client.name} />
+              <Image loading="lazy" src={client.logo} alt={client.name} sx={{ marginRight: 40 }} />
             </Box>
           ))}
         </Slider>
         <Button variant="muted" sx={styles.button}>
-          <a  sx={styles.link} href={monCvLink} target='_blank' rel='noopener noreferrer'>
-              Télécharger mon CV pour plus de détails
+          <a sx={styles.link} href={monCvLink} target='_blank' rel='noopener noreferrer'>
+            Download my resume for more details
           </a>
         </Button>
       </Container>
@@ -173,12 +174,12 @@ const Clients = () => {
 export default Clients;
 
 const styles = {
-  link:{
-      textDecoration: 'none',
-      color : '#444',
-      ':hover': {
-        color : '#FFF'
-      },
+  link: {
+    textDecoration: 'none',
+    color: '#444',
+    ':hover': {
+      color: '#FFF'
+    },
   },
   section: {
     pt: [50, 50, 50, 70, 60, 80],
@@ -200,7 +201,7 @@ const styles = {
   logo: {
     display: 'flex !important',
     justifyContent: 'center',
-    mx: '10px',
+    mx: '20px',
     ':focus': {
       outline: 'none',
     },

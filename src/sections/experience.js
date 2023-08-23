@@ -15,40 +15,39 @@ const data = [
   {
     id: 1,
     thumb: thumb5,
-    commentCount: "Janvier 2021",
+    commentCount: "Oct 2022",
     link: '#!',
-    title: `Développeur Frontend Angular chez AFI assurances`,
+    title: `Fullstack Developer Node.js - React.js at NeoWorlder (LootNFT)`,
   },
   {
     id: 2,
     thumb: thumb4,
-    commentCount: "decembre 2020",
+    commentCount: "Feb 2022",
     link: '#!',
-    title: `Ingénieur Software et systèmes embarqués`,
+    title: `Fullstack Node.js - React.js Developer at Amalia.io`,
   },
   {
     id: 3,
-    thumb: thumb1,
-    commentCount: "Juin 2020",
+    thumb: thumb3,
+    commentCount: "Nov 2021",
     link: '#!',
-    title: `Developpeur front-end chez MyAgency`,
+    title: `Fullstack Node.js - React.js Developer at Sell-up.fr`,
   },
   {
     id: 4,
-    thumb: thumb3,
-    commentCount: "Novembre 2019",
+    thumb: thumb2,
+    commentCount: "Feb 2021",
     link: '#!',
-    title: `Developpeur Nodejs indépendant chez Freelancer`,
+    title: `React.js Developer at AFI Assurance
+    `,
   },
   {
     id: 5,
-    thumb: thumb2,
-    commentCount: "Septembre 2019",
+    thumb: thumb1,
+    commentCount: "Nov 2019",
     link: '#!',
-    title: `Stagiaire en tant que technicien de maintenance chez Mark'in`,
+    title: `FullStack Node - React Junior Developer at MyAgency`,
   },
-  
-  
 ];
 
 function SlickArrow({ className, onClick, control }) {
@@ -101,7 +100,8 @@ const Blog = () => {
         <SectionHeading
           sx={styles.heading}
           slogan="Experiences"
-          title="Expériences professionnelles recents"
+          title="Recent work experience"
+          description={"Throughout my career, I've worked as a dedicated web developer, harnessing the power of JavaScript/TypeScript and cutting-edge frameworks to create engaging and adaptive web solutions. Working collaboratively in interdisciplinary teams, I have translated intricate designs into seamless user experiences while maintaining an unwavering commitment to code excellence and optimal performance."}
         />
         <Slider sx={styles.blogWrapper} {...settings}>
           {data?.map((post) => (

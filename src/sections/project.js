@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import {useState , useEffect} from 'react';
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router'
 import { jsx, Box, Container, Image, Button } from 'theme-ui';
 import { RiArrowRightSLine } from 'react-icons/ri';
@@ -48,7 +48,7 @@ const data = [
   },
 ];
 
-const loadingData =[
+const loadingData = [
   {
     id: 1,
     image: gallery1,
@@ -65,37 +65,38 @@ const masonryOptions = {
   transitionDuration: 0.5,
 };
 
-const Gallery = ({ posts , lookAt}) => {
+const Gallery = ({ posts, lookAt }) => {
 
   // console.log(posts , "projects")
 
   const router = useRouter()
-  const [load , setLoad] = useState(false)
+  const [load, setLoad] = useState(false)
 
   // const handlePushPage = (idProject) => router.push(`/projects/${idProject}`)
   const handlePushPage = (idProject) => lookAt(idProject);
 
   useEffect(() => {
     data.push(...loadingData);
-  },[load])
+  }, [load])
 
   return (
     <Box id="gallery" as="section" sx={styles.section}>
       <Container sx={styles.container}>
         <SectionHeading
           sx={styles.heading}
-          slogan="Projets personnels"
-          title="Decouvrons ensemble mes projets personnels"
+          slogan="Personal projects"
+          title="Let's discover my personal projects together"
+          description={"Passionate about continual growth, I devote my free time to diverse side projects that expand my skillset and understanding of web development. These projects reflect my creativity and dedication, spanning from experimenting with cutting-edge technologies to addressing real-world challenges, all while upholding the principles of clean code and innovative problem-solving."}
         />
         {/* <Box as={Masonry} options={masonryOptions} sx={styles.galleryWrapper}> */}
         <Box sx={styles.galleryWrapper}>
           {posts?.map((item) => (
-            <GalleryCard key={item.id} item={item} push={handlePushPage}/>
+            <GalleryCard key={item.id} item={item} push={handlePushPage} />
           ))}
         </Box>
         {/* <Button variant="muted" sx={styles.button} onClick={() => router.push('/projects')}> */}
-        <Button variant="muted" sx={styles.button} onClick={()=>setLoad(true)}>
-          Voir plus de projets <RiArrowRightSLine size="20px" />
+        <Button variant="muted" sx={styles.button} onClick={() => setLoad(true)}>
+          See more projects <RiArrowRightSLine size="20px" />
         </Button>
       </Container>
     </Box>
@@ -115,8 +116,8 @@ const styles = {
   galleryWrapper: {
     mx: '-15px',
     display: 'flex',
-    flexDirection : 'row',
-    flexWrap : 'wrap'
+    flexDirection: 'row',
+    flexWrap: 'wrap'
   },
   button: {
     minHeight: [50, 50, 50, 60],

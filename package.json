@@ -11,7 +11,7 @@
     "postbuild": "next-sitemap"
   },
   "engines":{
-    "node": "^12.x"
+    "node": "^18.x"
   },
   "dependencies": {
     "next": "^9.5.4",
